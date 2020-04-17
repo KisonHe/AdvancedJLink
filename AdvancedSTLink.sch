@@ -822,7 +822,7 @@ $EndComp
 Text GLabel 6550 3050 0    50   Input ~ 0
 T_SWCLK
 NoConn ~ 3050 2900
-Text GLabel 7550 3050 2    50   Input ~ 0
+Text GLabel 8000 3050 2    50   Input ~ 0
 T_SWDIO
 Text GLabel 6550 3250 0    50   Input ~ 0
 T_SWCLK_O
@@ -1134,30 +1134,30 @@ T_SWDIO_O
 $Comp
 L Connector_Generic:Conn_01x04 J4
 U 1 1 5EA79A78
-P 9400 3350
-F 0 "J4" H 9480 3342 50  0000 L CNN
-F 1 "Conn_01x04" H 9480 3251 50  0000 L CNN
-F 2 "" H 9400 3350 50  0001 C CNN
-F 3 "~" H 9400 3350 50  0001 C CNN
-	1    9400 3350
+P 9400 1450
+F 0 "J4" H 9480 1442 50  0000 L CNN
+F 1 "Conn_01x04" H 9480 1351 50  0000 L CNN
+F 2 "" H 9400 1450 50  0001 C CNN
+F 3 "~" H 9400 1450 50  0001 C CNN
+	1    9400 1450
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR041
 U 1 1 5EA7A40A
-P 9200 3250
-F 0 "#PWR041" H 9200 3000 50  0001 C CNN
-F 1 "GND" V 9205 3122 50  0000 R CNN
-F 2 "" H 9200 3250 50  0001 C CNN
-F 3 "" H 9200 3250 50  0001 C CNN
-	1    9200 3250
+P 9200 1350
+F 0 "#PWR041" H 9200 1100 50  0001 C CNN
+F 1 "GND" V 9205 1222 50  0000 R CNN
+F 2 "" H 9200 1350 50  0001 C CNN
+F 3 "" H 9200 1350 50  0001 C CNN
+	1    9200 1350
 	0    1    1    0   
 $EndComp
-Text GLabel 9200 3350 0    50   Input ~ 0
+Text GLabel 9200 1450 0    50   Input ~ 0
 T_RXD_O
-Text GLabel 9200 3450 0    50   Input ~ 0
+Text GLabel 9200 1550 0    50   Input ~ 0
 T_TXD_O
-Text GLabel 9200 3550 0    50   Input ~ 0
+Text GLabel 9200 1650 0    50   Input ~ 0
 V_OUT_3.3
 $Comp
 L Device:LED D5
@@ -1195,10 +1195,6 @@ F 3 "" H 6700 7150 50  0001 C CNN
 	1    6700 7150
 	1    0    0    -1  
 $EndComp
-Text Label 9500 2200 0    50   ~ 0
-SWD-1.27
-Text Label 9500 3250 0    50   ~ 0
-Serial-2.54
 Wire Wire Line
 	3550 1600 3650 1600
 Wire Wire Line
@@ -1417,4 +1413,41 @@ F 3 "" H 2650 4700 50  0001 C CNN
 	1    2650 4700
 	1    0    0    -1  
 $EndComp
+Text GLabel 8000 2750 2    50   Input ~ 0
+T_TXD
+$Comp
+L Device:R_Small R_SWD
+U 1 1 5EAB9473
+P 7900 3050
+F 0 "R_SWD" V 7704 3050 50  0000 C CNN
+F 1 "0" V 7795 3050 50  0000 C CNN
+F 2 "" H 7900 3050 50  0001 C CNN
+F 3 "~" H 7900 3050 50  0001 C CNN
+	1    7900 3050
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R_ESP
+U 1 1 5EAB98EE
+P 7900 2750
+F 0 "R_ESP" V 7704 2750 50  0000 C CNN
+F 1 "DNP" V 7795 2750 50  0000 C CNN
+F 2 "" H 7900 2750 50  0001 C CNN
+F 3 "~" H 7900 2750 50  0001 C CNN
+	1    7900 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 2750 7700 3050
+Wire Wire Line
+	7700 3050 7550 3050
+Connection ~ 7700 3050
+Wire Wire Line
+	7800 3050 7700 3050
+Wire Wire Line
+	7700 2750 7800 2750
+Text Notes 8750 3300 0    50   ~ 0
+For STM32: \nPlace R_SWD\n1 - SWO\n2 - NRST\n5 - SWCLK\n6 - SWDIO
+Text Notes 8750 3950 0    50   ~ 0
+For ESP32 / ESP8266: \nPlace R_ESP\n1 - TX\n2 - EN\n5 - GPIO0\n6 - RX\n(From MCU perspective)
 $EndSCHEMATC
