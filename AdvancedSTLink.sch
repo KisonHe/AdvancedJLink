@@ -266,8 +266,8 @@ L Power_Protection:USBLC6-2SC6 U3
 U 1 1 5E9B6297
 P 2850 5900
 F 0 "U3" V 3000 6250 50  0000 L CNN
-F 1 "USBLC6-2SC6" V 3100 6250 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 2100 6300 50  0001 C CNN
+F 1 "USBLC6-2P6" V 3100 6250 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-666" H 2100 6300 50  0001 C CNN
 F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 3050 6250 50  0001 C CNN
 	1    2850 5900
 	1    0    0    -1  
@@ -1168,17 +1168,6 @@ NoConn ~ 3350 3500
 NoConn ~ 3350 3600
 NoConn ~ 3350 3900
 NoConn ~ 3350 4100
-$Comp
-L Power_Protection:USBLC6-2SC6 U?
-U 1 1 5ECDEAB0
-P 7100 3900
-F 0 "U?" V 7250 4250 50  0000 L CNN
-F 1 "USBLC6-2SC6" V 7350 4250 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6350 4300 50  0001 C CNN
-F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 7300 4250 50  0001 C CNN
-	1    7100 3900
-	1    0    0    -1  
-$EndComp
 Text GLabel 6600 4000 0    50   Input ~ 0
 T_SWCLK_O
 Text GLabel 6200 3600 0    50   Input ~ 0
@@ -1261,17 +1250,6 @@ Wire Wire Line
 Connection ~ 7650 3800
 Wire Wire Line
 	7650 3800 7600 3800
-$Comp
-L Power_Protection:USBLC6-2SC6 U?
-U 1 1 5ECF2C2A
-P 7100 2250
-F 0 "U?" V 7250 2600 50  0000 L CNN
-F 1 "USBLC6-2SC6" V 7350 2600 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23-6" H 6350 2650 50  0001 C CNN
-F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 7300 2600 50  0001 C CNN
-	1    7100 2250
-	1    0    0    -1  
-$EndComp
 Text GLabel 6600 2350 0    50   Input ~ 0
 T_NRST_O
 Text GLabel 6200 1950 0    50   Input ~ 0
@@ -1325,5 +1303,71 @@ F 2 "" H 7700 2150 50  0001 C CNN
 F 3 "~" H 7700 2150 50  0001 C CNN
 	1    7700 2150
 	0    1    1    0   
+$EndComp
+$Comp
+L Power_Protection:USBLC6-2SC6 U?
+U 1 1 5EC4CDD1
+P 7100 3900
+F 0 "U?" V 7250 4250 50  0000 L CNN
+F 1 "USBLC6-2P6" V 7350 4250 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-666" H 6350 4300 50  0001 C CNN
+F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 7300 4250 50  0001 C CNN
+	1    7100 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Power_Protection:USBLC6-2SC6 U?
+U 1 1 5EC4E277
+P 7100 2250
+F 0 "U?" V 7250 2600 50  0000 L CNN
+F 1 "USBLC6-2P6" V 7350 2600 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-666" H 6350 2650 50  0001 C CNN
+F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 7300 2600 50  0001 C CNN
+	1    7100 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EC4FB61
+P 7100 4400
+F 0 "#PWR?" H 7100 4150 50  0001 C CNN
+F 1 "GND" V 7105 4272 50  0000 R CNN
+F 2 "" H 7100 4400 50  0001 C CNN
+F 3 "" H 7100 4400 50  0001 C CNN
+	1    7100 4400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EC4FE17
+P 7100 2750
+F 0 "#PWR?" H 7100 2500 50  0001 C CNN
+F 1 "GND" V 7105 2622 50  0000 R CNN
+F 2 "" H 7100 2750 50  0001 C CNN
+F 3 "" H 7100 2750 50  0001 C CNN
+	1    7100 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EC5050A
+P 7100 1750
+F 0 "#PWR?" H 7100 1600 50  0001 C CNN
+F 1 "+3.3V" V 7115 1878 50  0000 L CNN
+F 2 "" H 7100 1750 50  0001 C CNN
+F 3 "" H 7100 1750 50  0001 C CNN
+	1    7100 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EC50C97
+P 7100 3400
+F 0 "#PWR?" H 7100 3250 50  0001 C CNN
+F 1 "+3.3V" V 7115 3528 50  0000 L CNN
+F 2 "" H 7100 3400 50  0001 C CNN
+F 3 "" H 7100 3400 50  0001 C CNN
+	1    7100 3400
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
