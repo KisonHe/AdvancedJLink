@@ -1210,10 +1210,6 @@ Wire Wire Line
 	7650 3800 7600 3800
 Text GLabel 6600 2350 0    50   Input ~ 0
 T_NRST_O
-Text GLabel 6200 1950 0    50   Input ~ 0
-TCK1
-Text GLabel 6200 2150 0    50   Input ~ 0
-TCK2
 $Comp
 L Device:R_Small R6
 U 1 1 5ECF663F
@@ -1382,4 +1378,8 @@ F 3 "~" H 2100 4800 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2200 4800 2450 4800
+Text GLabel 6200 2150 0    50   Input ~ 0
+RST2
+Text GLabel 6200 1950 0    50   Input ~ 0
+RST1
 $EndSCHEMATC
