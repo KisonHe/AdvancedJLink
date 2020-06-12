@@ -439,7 +439,7 @@ F 3 "" H 3300 7350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x06 J3
+L Connector_Generic_MountingPin:Conn_01x06_MountingPin J3
 U 1 1 5E9ED5E8
 P 9150 2200
 F 0 "J3" H 9230 2192 50  0000 L CNN
@@ -1440,5 +1440,40 @@ F 2 "lc:SMA(DO-214AC)_S1" H 6900 4925 50  0001 C CNN
 F 3 "http://www.jameco.com/Jameco/Products/ProdDS/1538777.pdf" H 6900 5100 50  0001 C CNN
 	1    6900 5100
 	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C15
+U 1 1 5EE35A85
+P 10000 2250
+F 0 "C15" H 10092 2296 50  0000 L CNN
+F 1 "100nF" H 10092 2205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 10000 2250 50  0001 C CNN
+F 3 "~" H 10000 2250 50  0001 C CNN
+	1    10000 2250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5EE35A8F
+P 10000 2350
+F 0 "#PWR0101" H 10000 2100 50  0001 C CNN
+F 1 "GND" H 10005 2177 50  0000 C CNN
+F 2 "" H 10000 2350 50  0001 C CNN
+F 3 "" H 10000 2350 50  0001 C CNN
+	1    10000 2350
+	1    0    0    -1  
+$EndComp
+Text GLabel 10000 2150 1    50   Input ~ 0
+V_OUT_3.3
+$Comp
+L power:GND #PWR?
+U 1 1 5EE6A2B9
+P 9150 2700
+F 0 "#PWR?" H 9150 2450 50  0001 C CNN
+F 1 "GND" H 9155 2527 50  0000 C CNN
+F 2 "" H 9150 2700 50  0001 C CNN
+F 3 "" H 9150 2700 50  0001 C CNN
+	1    9150 2700
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
