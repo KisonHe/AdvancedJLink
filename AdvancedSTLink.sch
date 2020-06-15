@@ -257,10 +257,10 @@ F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 3200 6350 50  00
 	1    3000 6000
 	1    0    0    -1  
 $EndComp
-Text GLabel 2500 5900 0    50   Input ~ 0
-USB_DN
-Text GLabel 3500 5900 2    50   Input ~ 0
+Text GLabel 2500 6100 0    50   Input ~ 0
 USB_DP
+Text GLabel 3500 6100 2    50   Input ~ 0
+USB_DN
 $Comp
 L power:GND #PWR019
 U 1 1 5E9BB223
@@ -294,10 +294,10 @@ F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1250 59
 	1    1100 5900
 	1    0    0    -1  
 $EndComp
-Text GLabel 3500 6100 2    50   Input ~ 0
-USB_IN_DP
-Text GLabel 2500 6100 0    50   Input ~ 0
+Text GLabel 3500 5900 2    50   Input ~ 0
 USB_IN_DN
+Text GLabel 2500 5900 0    50   Input ~ 0
+USB_IN_DP
 Text GLabel 1700 5600 2    50   Input ~ 0
 USB_IN_DP
 Text GLabel 1700 5500 2    50   Input ~ 0
