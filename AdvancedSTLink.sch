@@ -512,12 +512,12 @@ $EndComp
 $Comp
 L power:GND #PWR032
 U 1 1 5EA541D1
-P 8450 5800
-F 0 "#PWR032" H 8450 5550 50  0001 C CNN
-F 1 "GND" V 8455 5672 50  0000 R CNN
-F 2 "" H 8450 5800 50  0001 C CNN
-F 3 "" H 8450 5800 50  0001 C CNN
-	1    8450 5800
+P 8450 5900
+F 0 "#PWR032" H 8450 5650 50  0001 C CNN
+F 1 "GND" V 8455 5772 50  0000 R CNN
+F 2 "" H 8450 5900 50  0001 C CNN
+F 3 "" H 8450 5900 50  0001 C CNN
+	1    8450 5900
 	1    0    0    -1  
 $EndComp
 Text GLabel 10000 5300 2    50   Input ~ 0
@@ -620,7 +620,7 @@ L Device:C_Small C12
 U 1 1 5EA9820D
 P 8800 5600
 F 0 "C12" V 8950 5400 50  0000 L CNN
-F 1 "22uF" V 8950 5600 50  0000 L CNN
+F 1 "10uF" V 8950 5600 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 8800 5600 50  0001 C CNN
 F 3 "~" H 8800 5600 50  0001 C CNN
 	1    8800 5600
@@ -631,12 +631,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR051
 U 1 1 5EA99BA7
-P 8800 5700
-F 0 "#PWR051" H 8800 5450 50  0001 C CNN
-F 1 "GND" V 8805 5572 50  0000 R CNN
-F 2 "" H 8800 5700 50  0001 C CNN
-F 3 "" H 8800 5700 50  0001 C CNN
-	1    8800 5700
+P 8800 5900
+F 0 "#PWR051" H 8800 5650 50  0001 C CNN
+F 1 "GND" V 8805 5772 50  0000 R CNN
+F 2 "" H 8800 5900 50  0001 C CNN
+F 3 "" H 8800 5900 50  0001 C CNN
+	1    8800 5900
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1425,12 +1425,12 @@ Wire Wire Line
 $Comp
 L Device:L L2
 U 1 1 5EE835EA
-P 9100 5300
-F 0 "L2" V 9290 5300 50  0000 C CNN
-F 1 "DFE252012P-2R2M" V 9199 5300 50  0000 C CNN
-F 2 "Inductor_SMD:L_TDK_NLV25_2.5x2.0mm" H 9100 5300 50  0001 C CNN
-F 3 "https://www.murata.com/~/media/webrenewal/products/inductor/chip/tokoproducts/wirewoundmetalalloychiptype/m_dfe252010p.ashx" H 9100 5300 50  0001 C CNN
-	1    9100 5300
+P 9400 5300
+F 0 "L2" V 9590 5300 50  0000 C CNN
+F 1 "DFE252012P-2R2M" V 9499 5300 50  0000 C CNN
+F 2 "Inductor_SMD:L_TDK_NLV25_2.5x2.0mm" H 9400 5300 50  0001 C CNN
+F 3 "https://www.murata.com/~/media/webrenewal/products/inductor/chip/tokoproducts/wirewoundmetalalloychiptype/m_dfe252010p.ashx" H 9400 5300 50  0001 C CNN
+	1    9400 5300
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -1516,12 +1516,59 @@ Wire Wire Line
 	7850 5300 8450 5300
 Wire Wire Line
 	7850 5550 8450 5550
-Wire Wire Line
-	8800 5300 8950 5300
 Connection ~ 8800 5300
 Wire Wire Line
-	9250 5300 9550 5300
-Connection ~ 9550 5300
-Wire Wire Line
 	9550 5300 9950 5300
+Connection ~ 9550 5300
+$Comp
+L Device:C_Small C17
+U 1 1 5EEFBFCA
+P 9100 5600
+F 0 "C17" V 9250 5400 50  0000 L CNN
+F 1 "10uF" V 9250 5600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 9100 5600 50  0001 C CNN
+F 3 "~" H 9100 5600 50  0001 C CNN
+	1    9100 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8450 5900 8450 5800
+Wire Wire Line
+	8800 5700 8800 5850
+Wire Wire Line
+	9100 5700 9100 5850
+Wire Wire Line
+	9100 5850 8800 5850
+Connection ~ 8800 5850
+Wire Wire Line
+	8800 5850 8800 5900
+Wire Wire Line
+	8800 5300 9100 5300
+Wire Wire Line
+	9100 5500 9100 5300
+Connection ~ 9100 5300
+Wire Wire Line
+	9100 5300 9250 5300
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 5EF396E4
+P 9800 4700
+F 0 "H?" H 9900 4746 50  0000 L CNN
+F 1 "MouseBite" H 9900 4655 50  0000 L CNN
+F 2 "mouse_bite:mouse-bite-3mm-slot" H 9800 4700 50  0001 C CNN
+F 3 "~" H 9800 4700 50  0001 C CNN
+	1    9800 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H?
+U 1 1 5EF3A2E2
+P 9800 4900
+F 0 "H?" H 9900 4946 50  0000 L CNN
+F 1 "MouseBite" H 9900 4855 50  0000 L CNN
+F 2 "mouse_bite:mouse-bite-3mm-slot" H 9800 4900 50  0001 C CNN
+F 3 "~" H 9800 4900 50  0001 C CNN
+	1    9800 4900
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
