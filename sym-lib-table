@@ -1,4 +1,5 @@
 (sym_lib_table
-  (lib (name MP2359)(type Legacy)(uri ${KIPRJMOD}/MP2359.lib)(options "")(descr ""))
-  (lib (name AdvancedSTLink-rescue)(type Legacy)(uri ${KIPRJMOD}/AdvancedSTLink-rescue.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "MP2359")(type "Legacy")(uri "${KIPRJMOD}/MP2359.lib")(options "")(descr ""))
+  (lib (name "AdvancedSTLink-rescue")(type "KiCad")(uri "${KIPRJMOD}/AdvancedSTLink-rescue.kicad_sym")(options "")(descr ""))
 )
